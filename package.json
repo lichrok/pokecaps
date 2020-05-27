@@ -1,0 +1,47 @@
+{
+  "name": "my-pokedex",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "author": "<s.dmitry.dev@gmail.com>",
+  "keywords": [
+    "boilerplate",
+    "npm",
+    "typescript",
+    "react-redux",
+    "javascript",
+    "react",
+    "redux"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/react-redux": "^7.0.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/redux-logger": "^3.0.7",
+    "node-sass": "^4.14.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts-ts": "3.1.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.19",
+    "@types/react-dom": "^16.0.11",
+    "eslint": "^5.12.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.2.2"
+  }
+}
