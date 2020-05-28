@@ -1,11 +1,3 @@
-export interface TypedResponse<T = any> extends Response {
-  json<P = T>(): Promise<P>;
-}
-
-export interface DataState {
-  results: [];
-}
-
 export interface DataInitialState {
   allPokemons: [];
   isLoading: boolean;
@@ -19,3 +11,16 @@ export interface Actions {
 export type ListItemProps = {
   name: string,
 };
+
+export interface TypeProps {
+  slot: number;
+  type: {
+    name: string;
+  };
+}
+
+export interface PokemonProps {
+  isLoading?: boolean;
+  name: string;
+  imageUrl: string;
+}

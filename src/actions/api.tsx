@@ -1,10 +1,8 @@
 import { FETCH_DATA } from '../constants/api';
-import { TypedResponse, DataState } from '../types';
+import { Dispatch } from 'redux';
 
-declare function fetch<T>(...args: any): Promise<TypedResponse<T>>;
-
-export const fetchData = () => async (dispatch: (arg0: { type: string; payload: DataState; }) => void) => {
-  fetch<DataState>('https://pokeapi.co/api/v2/pokemon/?limit=20')
+export const fetchData = () => async (dispatch: Dispatch) => {
+  return fetch('https://pokeapi.co/api/v2/pokemon/?limit=20')
     .then(response => response.json())
     .then(json =>
       dispatch({

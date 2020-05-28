@@ -1,1 +1,1 @@
-export const DATA_REQUESTED = 'DATA_REQUESTED';
+export const DATA_POKEMON_REQUEST: string = 'DATA_POKEMON_REQUEST';

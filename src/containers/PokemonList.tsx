@@ -25,11 +25,9 @@ const PokemonList = ({ onFetchData, pokemons }: ListProps) => {
   );
 
   return (
-    <main>
-      <div className={listStyles().cardLayout}>
-        {pokemons.map((pokemon: ListItemProps) => <ListItem name={pokemon.name} key={pokemon.name}/>)}
-      </div>
-    </main>
+    <div className={listStyles().cardLayout}>
+      {pokemons.map((pokemon: ListItemProps) => <ListItem name={pokemon.name} key={pokemon.name}/>)}
+    </div>
   );
 };
 
