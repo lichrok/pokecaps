@@ -1,13 +1,12 @@
 import React from 'react';
-
-type ListItemProps = {
-  name: string,
-};
+import { Link } from 'react-router-dom';
+import styles from './styles';
+import { ListItemProps } from 'src/types';
 
 const ListItem = ({ name }: ListItemProps) => (
-  <section className="card">
+  <Link className={styles().card} to={`/${name}`}>
     <span className="card-name">{name}</span>
-  </section>
+  </Link>
 );
 
 export default ListItem;

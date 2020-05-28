@@ -1,5 +1,5 @@
-import { FETCH_DATA } from 'src/constants/api';
-import { TypedResponse, DataState } from 'src/reducers/data';
+import { FETCH_DATA } from '../constants/api';
+import { TypedResponse, DataState } from '../types';
 
 declare function fetch<T>(...args: any): Promise<TypedResponse<T>>;
 

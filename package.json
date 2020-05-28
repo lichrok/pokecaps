@@ -1,18 +1,10 @@
 {
-  "name": "my-pokedex",
+  "name": "pokecaps",
   "version": "0.1.0",
   "private": true,
   "description": "",
   "author": "<s.dmitry.dev@gmail.com>",
-  "keywords": [
-    "boilerplate",
-    "npm",
-    "typescript",
-    "react-redux",
-    "javascript",
-    "react",
-    "redux"
-  ],
+  "keywords": [],
   "license": "MIT",
   "dependencies": {
     "@types/react-redux": "^7.0.0",
@@ -21,6 +13,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "react-jss": "^10.1.1",
     "react-redux": "^6.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts-ts": "3.1.0",

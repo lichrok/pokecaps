@@ -1,24 +1,13 @@
 import { FETCH_DATA } from 'src/constants/api';
+import { Actions, DataInitialState } from 'src/types';
+import { Reducer } from 'redux';
 
-export interface TypedResponse<T = any> extends Response {
-  json<P = T>(): Promise<P>;
-}
-
-export interface DataState {
-  results: [];
-}
-
-type Actions = {
-  type: string;
-  payload: any;
-};
-
-const initState = {
+const initState: DataInitialState = {
   allPokemons: [],
   isLoading: false,
 };
 
-const dataReducer = (state: any = initState, action: Actions) => {
+const dataReducer: Reducer<DataInitialState> = (state = initState, action: Actions) => {
   switch (action.type) {
     case FETCH_DATA:
       return {
