@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AbilityProps } from 'src/types';
+import { PokemonAbilityProps } from 'src/types';
 
 interface Props {
-  abilities: AbilityProps[];
+  abilities: PokemonAbilityProps[];
 }
 
 const PokemonAbilities: React.FC<Props> = ({ abilities }): any => {

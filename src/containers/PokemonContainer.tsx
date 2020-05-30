@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getLastPathname } from '../helpers/utils';
+import { getLastPathname } from 'src/utils';
 import { getPokemonData, pokemonDataClear } from '../actions/pokemon';
 import { PokemonProps } from '../types';
 import Pokemon from '../components/Pokemon';
