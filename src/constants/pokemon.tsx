@@ -1,1 +1,4 @@
 export const DATA_POKEMON_REQUEST: string = 'DATA_POKEMON_REQUEST';
+export const DATA_POKEMON_LOADED: string = 'DATA_POKEMON_LOADED';
+export const DATA_POKEMON_ERROR: string = 'DATA_POKEMON_ERROR';
+export const DATA_POKEMON_CLEAR: string = 'DATA_POKEMON_CLEAR';

@@ -1,22 +1,43 @@
-import { DATA_POKEMON_REQUEST } from 'src/constants/pokemon';
-import { Actions, PokemonProps } from 'src/types';
+import {
+  DATA_POKEMON_CLEAR,
+  DATA_POKEMON_LOADED,
+  DATA_POKEMON_REQUEST,
+} from '../constants/pokemon';
+import { Actions, PokemonProps } from '../types';
 import { Reducer } from 'redux';
 
 const initState: PokemonProps = {
   isLoading: false,
   name: '',
-  imageUrl: '',
+  height: 0,
+  weight: 0,
+  sprites: {
+    front_default: '',
+  },
+  types: [],
+  stats: [],
+  abilities: [],
 };
 
 const pokemonReducer: Reducer<PokemonProps> = (state = initState, action: Actions) => {
   switch (action.type) {
     case DATA_POKEMON_REQUEST:
-      const { name, sprites: { front_default: imageUrl } } = action.payload;
-
       return {
         ...state,
-        name,
-        imageUrl,
+        ...action.payload,
+        isLoading: true,
+        error: '',
+      };
+    case DATA_POKEMON_LOADED:
+      return {
+        ...state,
+        isLoading: false,
+        error: '',
+      };
+    case DATA_POKEMON_CLEAR:
+      return {
+        ...state,
+        ...action.payload,
       };
     default:
       return state;

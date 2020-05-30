@@ -12,15 +12,38 @@ export type ListItemProps = {
   name: string,
 };
 
-export interface TypeProps {
+export type ImgProps = {
+  front_default: string;
+};
+
+export type StatProps = {
+  stat: {
+    name: string;
+  };
+  base_stat: number;
+};
+
+export type TypeProps = {
   slot: number;
   type: {
     name: string;
   };
-}
+};
+
+export type AbilityProps = {
+  ability: {
+    name: string;
+    url: string;
+  };
+};
 
 export interface PokemonProps {
-  isLoading?: boolean;
+  isLoading: boolean;
   name: string;
-  imageUrl: string;
+  sprites: ImgProps;
+  height: number;
+  weight: number;
+  types: TypeProps[];
+  stats: StatProps[];
+  abilities: AbilityProps[];
 }

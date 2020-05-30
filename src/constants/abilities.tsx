@@ -1,0 +1,1 @@
+export const DATA_ABILITY_REQUEST: string = 'DATA_ABILITY_REQUEST';

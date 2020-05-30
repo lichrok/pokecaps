@@ -9,5 +9,6 @@ export const fetchData = () => async (dispatch: Dispatch) => {
         type: FETCH_DATA,
         payload: json,
       }),
-    );
+    )
+    .catch(error => console.log(error));
 };

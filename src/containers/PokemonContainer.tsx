@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getPokemonData } from '../actions/pokemon';
+import { Link } from 'react-router-dom';
+import { getLastPathname } from '../helpers/utils';
+import { getPokemonData, pokemonDataClear } from '../actions/pokemon';
 import { PokemonProps } from '../types';
 import Pokemon from '../components/Pokemon';
 
 interface PokemonReqProps extends PokemonProps {
   onFetchData: Function;
+  onLeavePage: Function;
   pokemon: any;
 }
 
@@ -13,17 +16,32 @@ type StoreProps = {
   pokemon: any,
 };
 
-const PokemonContainer: React.FC<PokemonReqProps> = ({ onFetchData, pokemon }) => {
+const PokemonContainer: React.FC<PokemonReqProps> = ({
+  onFetchData,
+  onLeavePage,
+  pokemon,
+}) => {
   useEffect(
     () => {
-      const name = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
-      onFetchData(name);
+      onFetchData(getLastPathname());
     },
     [],
   );
 
   return (
-    <Pokemon name={pokemon.name} imageUrl={pokemon.imageUrl}/>
+    <div>
+      <Link to="/" onClick={() => onLeavePage()}>See 'em all!</Link>
+      <Pokemon
+        isLoading={pokemon.isLoading}
+        name={pokemon.name}
+        sprites={pokemon.sprites}
+        height={pokemon.height}
+        weight={pokemon.weight}
+        types={pokemon.types}
+        stats={pokemon.stats}
+        abilities={pokemon.abilities}
+      />
+    </div>
   );
 };
 
@@ -34,6 +52,9 @@ const mapStateToProps = (store: StoreProps) => ({
 const mapDispatchToProps = (dispatch: any) => ({
   onFetchData: (pokemonName: string) => {
     dispatch(getPokemonData(pokemonName));
+  },
+  onLeavePage: () => {
+    dispatch(pokemonDataClear());
   },
 });
 
