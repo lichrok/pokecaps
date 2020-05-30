@@ -1,17 +1,48 @@
 import React, { useEffect } from 'react';
-import { getLastPathname } from 'src/helpers/utils';
+import { connect } from 'react-redux';
+import { getAbilityData } from '../actions/ablities';
+import { getLastPathname } from '../utils';
+import { AbilityProps } from '../types';
+import Ability from '../components/Ability';
 
-const AbilityContainer = () => {
+interface AbilityReqProps extends AbilityProps {
+  onFetchData: Function;
+  ability: any;
+}
+
+type StoreProps = {
+  ability: any,
+};
+
+const AbilityContainer: React.FC<AbilityReqProps> = ({
+  onFetchData,
+  ability,
+}) => {
   useEffect(
     () => {
-      console.log(getLastPathname());
+      onFetchData(getLastPathname());
     },
     [],
   );
 
   return (
-    <p>{getLastPathname()}</p>
+    <Ability
+      name={ability.name}
+      effect_entries={ability.effect_entries}
+      generation={ability.generation}
+      pokemon={ability.pokemon}
+    />
   );
 };
 
-export default AbilityContainer;
+const mapStateToProps = (store: StoreProps) => ({
+  ability: store.ability,
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  onFetchData: (abilityName: string) => {
+    dispatch(getAbilityData(abilityName));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AbilityContainer);

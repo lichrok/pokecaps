@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchData } from '../actions/api';
+import { fetchData } from 'src/actions/pokemonList';
 import ListItem from '../components/ListItem';
 import listStyles from '../containers/listStyle';
 import { ListItemProps } from '../types';

@@ -30,7 +30,7 @@ export type TypeProps = {
   };
 };
 
-export type AbilityProps = {
+export type PokemonAbilityProps = {
   ability: {
     name: string;
     url: string;
@@ -45,5 +45,24 @@ export interface PokemonProps {
   weight: number;
   types: TypeProps[];
   stats: StatProps[];
-  abilities: AbilityProps[];
+  abilities: PokemonAbilityProps[];
+}
+
+export type EffectProps = {
+  effect: string;
+};
+
+export type AbilityPokemonsProps = {
+  pokemon: {
+    name: string;
+  },
+};
+
+export interface AbilityProps {
+  name: string;
+  effect_entries: EffectProps[];
+  generation: {
+    name: string;
+  };
+  pokemon: AbilityPokemonsProps[];
 }

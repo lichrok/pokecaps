@@ -1,4 +1,4 @@
-import { FETCH_DATA } from 'src/constants/api';
+import { FETCH_DATA } from 'src/constants/pokemonList';
 import { Actions, DataInitialState } from 'src/types';
 import { Reducer } from 'redux';
 
@@ -12,7 +12,7 @@ const dataReducer: Reducer<DataInitialState> = (state = initState, action: Actio
     case FETCH_DATA:
       return {
         ...state,
-        allPokemons: action.payload.results,
+        allPokemons: action.payload,
       };
     default:
       return state;
