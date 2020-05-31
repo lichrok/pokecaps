@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { fetchData, searchPokemon } from 'src/redux/actions/pokemonList';
 import { filterPokemons } from 'src/redux/reselect';
 import ListItem from '../components/ListItem';
-import listStyles from '../containers/listStyle';
+import listStyles from './styles/listStyle';
+import searchStyle from './styles/searchStyle';
 import { ListItemProps } from '../types';
 
 type ListProps = {
@@ -27,15 +28,18 @@ const PokemonList = ({ onFetchData, onSearchUpdate, pokemons }: ListProps) => {
     [],
   );
 
+  const searchClasses = searchStyle();
+  const listClasses = listStyles();
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
     onSearchUpdate(event.target.value);
 
   return (
     <div>
-      <div>
-        <input type="text" onChange={handleChange}/>
+      <div className={searchClasses.searchWrap}>
+        <input type="text" className={searchClasses.searchInput} onChange={handleChange}/>
       </div>
-      <div className={listStyles().cardLayout}>
+      <div className={listClasses.cardLayout}>
         {pokemons.length
           ? pokemons.map((pokemon: ListItemProps) =>
             <ListItem name={pokemon.name} key={pokemon.name}/>,

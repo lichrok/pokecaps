@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import 'modern-css-reset/src/reset.css';
 import PokemonList from './containers/PokemonList';
 import PokemonContainer from './containers/PokemonContainer';
 import AbilityContainer from './containers/AbilityContainer';
