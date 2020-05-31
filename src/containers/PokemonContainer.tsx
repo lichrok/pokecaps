@@ -29,18 +29,20 @@ const PokemonContainer: React.FC<PokemonReqProps> = ({
   );
 
   return (
-    <div>
-      <Link to="/" onClick={() => onLeavePage()}>See 'em all!</Link>
-      <Pokemon
-        isLoading={pokemon.isLoading}
-        name={pokemon.name}
-        sprites={pokemon.sprites}
-        height={pokemon.height}
-        weight={pokemon.weight}
-        types={pokemon.types}
-        stats={pokemon.stats}
-        abilities={pokemon.abilities}
-      />
+    <div className="cap-container">
+      <div className="cap">
+        <Link to="/" onClick={() => onLeavePage()}>See 'em all!</Link>
+        <Pokemon
+          isLoading={pokemon.isLoading}
+          name={pokemon.name}
+          sprites={pokemon.sprites}
+          height={pokemon.height}
+          weight={pokemon.weight}
+          types={pokemon.types}
+          stats={pokemon.stats}
+          abilities={pokemon.abilities}
+        />
+      </div>
     </div>
   );
 };

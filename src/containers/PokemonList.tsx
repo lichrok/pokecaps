@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchData, searchPokemon } from 'src/redux/actions/pokemonList';
-import { filterPokemons } from 'src/redux/reselect';
+import { fetchData, searchPokemon } from '../redux/actions/pokemonList';
+import { filterPokemons } from '../redux/reselect';
 import ListItem from '../components/ListItem';
-import listStyles from './styles/listStyle';
-import searchStyle from './styles/searchStyle';
 import { ListItemProps } from '../types';
 
 type ListProps = {
@@ -28,18 +26,15 @@ const PokemonList = ({ onFetchData, onSearchUpdate, pokemons }: ListProps) => {
     [],
   );
 
-  const searchClasses = searchStyle();
-  const listClasses = listStyles();
-
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
     onSearchUpdate(event.target.value);
 
   return (
-    <div>
-      <div className={searchClasses.searchWrap}>
-        <input type="text" className={searchClasses.searchInput} onChange={handleChange}/>
+    <>
+      <div className="search-wrap">
+        <input type="text" className="search-input" onChange={handleChange}/>
       </div>
-      <div className={listClasses.cardLayout}>
+      <div className="card-layout">
         {pokemons.length
           ? pokemons.map((pokemon: ListItemProps) =>
             <ListItem name={pokemon.name} key={pokemon.name}/>,
@@ -47,7 +42,7 @@ const PokemonList = ({ onFetchData, onSearchUpdate, pokemons }: ListProps) => {
           : <p>There's no pokemon 😿</p>
         }
       </div>
-    </div>
+    </>
   );
 };
 

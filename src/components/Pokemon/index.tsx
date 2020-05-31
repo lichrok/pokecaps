@@ -15,8 +15,8 @@ const Pokemon: React.FC<PokemonProps> = ({
   const [isImageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div>
-      <h1>{name}</h1>
+    <div className="cap__info">
+      <h1 className="cap__info-name">{name}</h1>
       <img
         src={sprites.front_default}
         style={isImageLoaded ? {} : { display: 'none' }}

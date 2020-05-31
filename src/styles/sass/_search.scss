@@ -1,0 +1,19 @@
+.search {
+  &-wrap {
+    margin: 50px auto;
+    max-width: $column-width;
+    width: 100%;
+  }
+
+  &-input {
+    border: 1px solid $black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 100%;
+
+    &:focus {
+      box-shadow: 0 0 3px $primary;
+      outline: none;
+    }
+  }
+}
