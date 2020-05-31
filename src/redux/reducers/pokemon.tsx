@@ -2,8 +2,8 @@ import {
   DATA_POKEMON_CLEAR,
   DATA_POKEMON_LOADED,
   DATA_POKEMON_REQUEST,
-} from '../constants/pokemon';
-import { Actions, PokemonProps } from '../types';
+} from 'src/constants/pokemon';
+import { Actions, PokemonProps } from 'src/types';
 import { Reducer } from 'redux';
 
 const initState: PokemonProps = {

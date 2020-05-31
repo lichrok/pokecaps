@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 import { DATA_ABILITY_REQUEST } from 'src/constants/abilities';
-import api from '../utils/api';
+import api from 'src/utils/api';
 
 export const getAbilityData = (abilityName: string) => async (dispatch: Dispatch) => {
   await api

@@ -1,9 +1,9 @@
 import { Dispatch } from 'redux';
-import api from '../utils/api';
+import api from 'src/utils/api';
 import {
   DATA_POKEMON_CLEAR,
   DATA_POKEMON_REQUEST,
-} from '../constants/pokemon';
+} from 'src/constants/pokemon';
 
 export const getPokemonData = (pokemonName: string) => async (dispatch: Dispatch) => {
   await api

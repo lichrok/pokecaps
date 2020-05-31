@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getLastPathname } from 'src/utils';
-import { getPokemonData, pokemonDataClear } from '../actions/pokemon';
+import { getPokemonData, pokemonDataClear } from '../redux/actions/pokemon';
 import { PokemonProps } from '../types';
 import Pokemon from '../components/Pokemon';
 
@@ -49,7 +49,7 @@ const mapStateToProps = (store: StoreProps) => ({
   pokemon: store.pokemon,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   onFetchData: (pokemonName: string) => {
     dispatch(getPokemonData(pokemonName));
   },
