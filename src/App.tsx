@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PokemonList from './containers/PokemonList';
 import PokemonContainer from './containers/PokemonContainer';
 import AbilityContainer from './containers/AbilityContainer';
-import NotFound from './components/NotFound';
+import ErrorNotFound from './components/ErrorNotFound';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <Route exact path="/" component={PokemonList}/>
         <Route path="/pokemon/:pokemonName" component={PokemonContainer}/>
         <Route path="/ability/:abilityName" component={AbilityContainer}/>
-        <Route component={NotFound}/>
+        <Route component={ErrorNotFound}/>
       </Switch>
     </BrowserRouter>
   );

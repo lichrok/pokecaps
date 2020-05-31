@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getAbilityData } from '../actions/ablities';
+import { getAbilityData } from '../redux/actions/ablities';
 import { getLastPathname } from '../utils';
 import { AbilityProps } from '../types';
 import Ability from '../components/Ability';
@@ -39,7 +39,7 @@ const mapStateToProps = (store: StoreProps) => ({
   ability: store.ability,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   onFetchData: (abilityName: string) => {
     dispatch(getAbilityData(abilityName));
   },

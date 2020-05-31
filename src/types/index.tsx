@@ -1,5 +1,11 @@
+export type DataPokemonInitialState = {
+  name: string;
+  url: string;
+};
+
 export interface DataInitialState {
-  allPokemons: [];
+  allPokemons: DataPokemonInitialState[];
+  searchPokemon: string;
   isLoading: boolean;
 }
 
@@ -65,4 +71,10 @@ export interface AbilityProps {
     name: string;
   };
   pokemon: AbilityPokemonsProps[];
+}
+
+export interface RootProps {
+  data: DataInitialState;
+  pokemon: PokemonProps;
+  ability: AbilityProps;
 }

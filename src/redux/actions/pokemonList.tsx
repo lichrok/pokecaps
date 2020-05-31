@@ -1,6 +1,10 @@
 import { Dispatch } from 'redux';
-import { FETCH_DATA, REQUEST_URL } from 'src/constants/pokemonList';
-import api from '../utils/api';
+import {
+  FETCH_DATA,
+  REQUEST_URL,
+  SEARCH_POKEMON,
+} from 'src/constants/pokemonList';
+import api from 'src/utils/api';
 
 export const fetchData = () => async (dispatch: Dispatch) => {
   await api
@@ -11,3 +15,8 @@ export const fetchData = () => async (dispatch: Dispatch) => {
     }))
     .catch(error => console.error(error));
 };
+
+export const searchPokemon = (payload: string) => ({
+  payload,
+  type: SEARCH_POKEMON,
+});

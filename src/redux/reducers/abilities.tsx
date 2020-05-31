@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 import { DATA_ABILITY_REQUEST } from 'src/constants/abilities';
-import { Actions, AbilityProps } from '../types';
+import { Actions, AbilityProps } from 'src/types';
 
 const initState: AbilityProps = {
   name: '',
