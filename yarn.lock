@@ -30,6 +30,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.9.6":
+  version "7.10.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
+  integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@fimbul/bifrost@^0.21.0":
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/@fimbul/bifrost/-/bifrost-0.21.0.tgz#d0fafa25938fda475657a6a1e407a21bbe02c74e"
@@ -48,6 +55,13 @@
     inversify "^5.0.0"
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
+
+"@tanem/svg-injector@^8.0.51":
+  version "8.0.52"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.52.tgz#8c3c554b6641c71057bc5977ca9db8f376412e27"
+  integrity sha512-vC0GsxySzK8OwBj4vHUfLOGgzttVHx0BfZqm512NtUmM7Yff7048mrJnOwLKZue8TqDA5hlN1+h42OG2EqNcXQ==
+  dependencies:
+    "@babel/runtime" "^7.9.6"
 
 "@types/history@*":
   version "4.7.6"
@@ -7381,6 +7395,15 @@ react-scripts-ts@3.1.0:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "^1.1.3"
+
+react-svg@^11.0.24:
+  version "11.0.24"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-11.0.24.tgz#994197e8012e29d8bc34375e6a1c40c40f8b885a"
+  integrity sha512-IfANz6NwZGLSuqhZpy8cByZam0zr1dNSgQsj4ooNTmVmFlXJmNpFb/EiWhTv8L2TvriYTxg2oMEKm+6CdwSKwQ==
+  dependencies:
+    "@babel/runtime" "^7.9.6"
+    "@tanem/svg-injector" "^8.0.51"
+    prop-types "^15.7.2"
 
 react@^16.8.0:
   version "16.13.1"

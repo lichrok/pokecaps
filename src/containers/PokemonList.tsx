@@ -32,7 +32,12 @@ const PokemonList = ({ onFetchData, onSearchUpdate, pokemons }: ListProps) => {
   return (
     <>
       <div className="search-wrap">
-        <input type="text" className="search-input" onChange={handleChange}/>
+        <input
+          type="text"
+          className="search-input"
+          onChange={handleChange}
+          placeholder="Search..."
+        />
       </div>
       <div className="card-layout">
         {pokemons.length

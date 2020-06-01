@@ -1,21 +1,129 @@
 .cap {
-  border: 1px solid rgba($black, .3);
-  border-radius: 50%;
-  padding-top: 100%;
-  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $vertical-indent;
+  max-width: 500px;
   width: 100%;
 
   &-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 500px;
+    position: relative;
     width: 100%;
+
+    @media #{$tablet-portrait} {
+      border: 1px solid rgba($black, .1);
+      border-radius: 50%;
+      padding-top: 100%;
+      background-color: $white;
+    }
   }
 
   &__info {
-    left: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+
+    @media #{$tablet-portrait} {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      max-width: 250px;
+
+    }
+  }
+
+  &__info-header {
+    @media #{$tablet-portrait} {
+      height: 30%;
+    }
+  }
+
+  &__info-body {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media #{$tablet-portrait} {
+      height: calc(70% - 20px);
+      overflow-y: auto;
+      padding-left: 0;
+      padding-right: 0;
+      background: // Shadow covers
+              linear-gradient($white 30%, rgba($white, 0)),
+              linear-gradient(rgba($white, 0), $white 70%) 0 100%,
+                // Shadows
+              radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+              radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      background: // Shadow covers
+              linear-gradient($white 30%, rgba($white, 0)),
+              linear-gradient(rgba($white, 0), $white 70%) 0 100%,
+                // Shadows
+              radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+              radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      background-repeat: no-repeat;
+      background-color: $white;
+      background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+      background-attachment: local, local, scroll, scroll; // Opera support
+    }
+  }
+
+  &__info-name {
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 230px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__info-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__info-table {
+    width: 100%;
+
+    tr td:first-child {
+      font-weight: 600;
+      text-transform: capitalize;
+      width: 120px;
+    }
+
+    tr td:last-child {
+      padding-left: 20px;
+    }
+  }
+
+  &__info-stat {
+    background-color: $primary;
+    text-align: center;
+    border-radius: 4px;
+
+    small {
+      color: $white;
+      font-size: 12px;
+    }
+  }
+
+  &__back-link {
+    left: 10px;
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    text-decoration: none;
+    top: 25px;
+
+    @media #{$tablet-portrait} {
+      left: 95px;
+
+    }
+  }
+
+  &__back-icon {
+    height: 30px;
+    width: auto;
+
+    .background {
+      fill: $primary;
+    }
   }
 }

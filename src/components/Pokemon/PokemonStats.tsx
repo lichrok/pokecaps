@@ -13,8 +13,8 @@ const PokemonStats: React.FC<Props> = ({ stats }): any => {
       return <tr key={stat.name}>
         <td>{stat.name}</td>
         <td>
-          <div style={{ width: `${base_stat}%` }}>
-            <span>{`${base_stat}%`}</span>
+          <div className="content__info-stat" style={{ width: `${base_stat}%` }}>
+            <small>{`${base_stat}%`}</small>
           </div>
         </td>
       </tr>;

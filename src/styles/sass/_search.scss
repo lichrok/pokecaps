@@ -1,14 +1,20 @@
 .search {
   &-wrap {
-    margin: 50px auto;
-    max-width: $column-width;
-    width: 100%;
+    margin: $vertical-indent auto;
+    max-width: 1024px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media #{$laptop-crutch} {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &-input {
-    border: 1px solid $black;
+    border: 1px solid $gray-light;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 10px 8px;
     width: 100%;
 
     &:focus {
