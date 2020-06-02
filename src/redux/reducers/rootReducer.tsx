@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import dataReducer from 'src/redux/reducers/pokemonList';
-import pokemonReducer from 'src/redux/reducers/pokemon';
-import abilityReducer from 'src/redux/reducers/abilities';
+import dataReducer from './pokemonList';
+import pokemonReducer from './pokemon';
+import abilityReducer from './abilities';
 
 export default combineReducers({
   data: dataReducer,

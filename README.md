@@ -1,7 +1,25 @@
-# react-redux-typescript-boilerplate
+# react + redux + typescript SPA 
 
-a starting point for all your react, redux and typescript projects, with the store fully setup and an example reducer.
+## Features
+- retrieves data from the pokeapi
+- filters pokemon list by name
+- detailed information about pokemon
+- detailed information about ability
+- responsive
 
-## tslint
+## stack
+- react
+- react-router
+- sass
+- redux
+- redux-thunk
+- typescript
 
 this project follows `tslint-config-airbnb` for linting.
+
+## commands
+``yarn install``
+ 
+``yarn start``
+
+http://localhost:3000/
