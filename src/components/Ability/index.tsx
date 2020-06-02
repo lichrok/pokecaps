@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AbilityProps } from 'src/types';
-import { removeHyphen } from 'src/utils';
+import { removeHyphen, getGeneration } from 'src/utils';
 
 const Ability: React.FC<AbilityProps> = ({
   name,
@@ -13,7 +13,10 @@ const Ability: React.FC<AbilityProps> = ({
     <div className="content__info">
       <h1 className="content__info-title">{removeHyphen(name)}</h1>
       {effect_entries.map(entry => <p key={`a-${entry.effect}`}>{entry.effect}</p>)}
-      <p><b>Generation:</b> {generation.name}</p>
+      <p>
+        <b>Generation:</b>
+        <span className="content__info-generation">{getGeneration(generation.name)}</span>
+      </p>
       <div className="content__info-body">
         <span className="ability-pokemons__title">Pokemons with this ability:</span>
         <ul className="inline-list inline-list_theme_capital">

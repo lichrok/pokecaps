@@ -22,7 +22,7 @@ $header-width: 180px;
     width: 100%;
 
     @media #{$tablet-portrait} {
-      padding-top: 0;
+      padding: 0 40px 40px;
     }
   }
 
@@ -64,10 +64,13 @@ $header-width: 180px;
   }
 
   &__info-title {
-    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     text-transform: capitalize;
+
+    @media #{$tablet-portrait} {
+      margin-top: 20px;
+    }
   }
 
   &__info-img {
@@ -76,9 +79,7 @@ $header-width: 180px;
   }
 
   &__info-body {
-    @media #{$tablet-portrait} {
-      margin-top: 20px;
-    }
+    margin-top: 10px;
   }
 
   &__info-table {
@@ -106,6 +107,12 @@ $header-width: 180px;
     }
   }
 
+  &__info-generation {
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+
   &__back-link {
     left: 0;
     position: absolute;
@@ -131,5 +138,10 @@ $header-width: 180px;
     &:not(:last-of-type) {
       margin-bottom: 10px;
     }
+  }
+
+  &-footer {
+    margin-top: 20px;
+    text-align: center;
   }
 }
