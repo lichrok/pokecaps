@@ -3,14 +3,13 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ReactSVG } from 'react-svg';
 import { getLastPathname } from 'src/utils';
-import { getPokemonData, pokemonDataClear } from '../redux/actions/pokemon';
+import { getPokemonData } from '../redux/actions/pokemon';
 import { PokemonProps } from '../types';
 import Pokemon from '../components/Pokemon';
 import ReturnIcon from '../assets/svg/return.svg';
 
 interface PokemonReqProps extends PokemonProps {
   onFetchData: Function;
-  onLeavePage: Function;
   pokemon: any;
 }
 
@@ -20,7 +19,6 @@ type StoreProps = {
 
 const PokemonContainer: React.FC<PokemonReqProps> = ({
   onFetchData,
-  onLeavePage,
   pokemon,
 }) => {
   useEffect(
@@ -35,7 +33,6 @@ const PokemonContainer: React.FC<PokemonReqProps> = ({
       <Link
         to="/"
         className="content__back-link"
-        onClick={() => onLeavePage()}
         title="See 'em all!"
       >
         <ReactSVG
@@ -64,9 +61,6 @@ const mapStateToProps = (store: StoreProps) => ({
 const mapDispatchToProps = (dispatch: Function) => ({
   onFetchData: (pokemonName: string) => {
     dispatch(getPokemonData(pokemonName));
-  },
-  onLeavePage: () => {
-    dispatch(pokemonDataClear());
   },
 });
 

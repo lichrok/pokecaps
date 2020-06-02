@@ -1,3 +1,7 @@
+export type ResponseProps = {
+  data: object,
+};
+
 export type DataPokemonInitialState = {
   name: string;
   url: string;
@@ -65,6 +69,7 @@ export type AbilityPokemonsProps = {
 };
 
 export interface AbilityProps {
+  isLoading: boolean;
   name: string;
   effect_entries: EffectProps[];
   generation: {

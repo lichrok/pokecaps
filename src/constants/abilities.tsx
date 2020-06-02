@@ -1,1 +1,2 @@
 export const DATA_ABILITY_REQUEST: string = 'DATA_ABILITY_REQUEST';
+export const DATA_ABILITY_LOADED: string = 'DATA_ABILITY_LOADED';

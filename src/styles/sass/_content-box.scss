@@ -26,6 +26,14 @@ $header-width: 180px;
     }
   }
 
+  &__info-loader {
+    display: none;
+
+    &.is-visible {
+      display: block;
+    }
+  }
+
   &__info-header {
     background-color: $white;
     margin-left: auto;

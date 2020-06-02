@@ -45,6 +45,7 @@ const AbilityContainer: React.FC<AbilityReqProps> = ({
         effect_entries={ability.effect_entries}
         generation={ability.generation}
         pokemon={ability.pokemon}
+        isLoading={ability.isLoading}
       />
       <div className="content-footer">
         <Link className="link link_theme_big" to={'/'}>See 'em all!</Link>
