@@ -1,0 +1,16 @@
+// reset css
+@import '~modern-css-reset/dist/reset.min.css';
+
+// utils
+@import './utils/constants';
+@import './utils/colors';
+@import './utils/breakpoints';
+@import './utils/mixins';
+
+// components
+@import 'base';
+@import 'loader';
+@import 'pokemon-list';
+@import 'search';
+@import 'content-box';
+@import 'ability';

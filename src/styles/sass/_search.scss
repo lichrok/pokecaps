@@ -1,0 +1,25 @@
+.search {
+  &-wrap {
+    margin: $vertical-indent auto;
+    max-width: 1024px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media #{$laptop-crutch} {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-input {
+    border: 1px solid $gray-light;
+    border-radius: 4px;
+    padding: 10px 8px;
+    width: 100%;
+
+    &:focus {
+      box-shadow: 0 0 3px $primary;
+      outline: none;
+    }
+  }
+}

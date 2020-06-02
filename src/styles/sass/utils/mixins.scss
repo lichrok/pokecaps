@@ -1,0 +1,28 @@
+@mixin clearfix {
+  &::before,
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin transition($property...) {
+  transition-property: $property;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin btn-reset {
+  padding-right: 0;
+  padding-left: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+@mixin list-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}

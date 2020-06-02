@@ -1,0 +1,29 @@
+.ability {
+  margin-top: $vertical-indent;
+
+  &-title {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+
+  &-pokemons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @media #{$laptop-crutch} {
+      flex-direction: row;
+    }
+  }
+
+  &-pokemons__title {
+    @media #{$laptop-crutch} {
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+}

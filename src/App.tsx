@@ -4,16 +4,19 @@ import PokemonList from './containers/PokemonList';
 import PokemonContainer from './containers/PokemonContainer';
 import AbilityContainer from './containers/AbilityContainer';
 import ErrorNotFound from './components/ErrorNotFound';
+import './styles/css/index.css';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={PokemonList}/>
-        <Route path="/pokemon/:pokemonName" component={PokemonContainer}/>
-        <Route path="/ability/:abilityName" component={AbilityContainer}/>
-        <Route component={ErrorNotFound}/>
-      </Switch>
+      <main className="main">
+        <Switch>
+          <Route exact path="/" component={PokemonList}/>
+          <Route path="/pokemon/:pokemonName" component={PokemonContainer}/>
+          <Route path="/ability/:abilityName" component={AbilityContainer}/>
+          <Route component={ErrorNotFound}/>
+        </Switch>
+      </main>
     </BrowserRouter>
   );
 };

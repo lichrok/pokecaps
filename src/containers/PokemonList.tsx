@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchData, searchPokemon } from 'src/redux/actions/pokemonList';
-import { filterPokemons } from 'src/redux/reselect';
+import { fetchData, searchPokemon } from '../redux/actions/pokemonList';
+import { filterPokemons } from '../redux/reselect';
 import ListItem from '../components/ListItem';
-import listStyles from '../containers/listStyle';
 import { ListItemProps } from '../types';
 
 type ListProps = {
@@ -31,11 +30,16 @@ const PokemonList = ({ onFetchData, onSearchUpdate, pokemons }: ListProps) => {
     onSearchUpdate(event.target.value);
 
   return (
-    <div>
-      <div>
-        <input type="text" onChange={handleChange}/>
+    <>
+      <div className="search-wrap">
+        <input
+          type="text"
+          className="search-input"
+          onChange={handleChange}
+          placeholder="Search..."
+        />
       </div>
-      <div className={listStyles().cardLayout}>
+      <div className="card-layout">
         {pokemons.length
           ? pokemons.map((pokemon: ListItemProps) =>
             <ListItem name={pokemon.name} key={pokemon.name}/>,
@@ -43,7 +47,7 @@ const PokemonList = ({ onFetchData, onSearchUpdate, pokemons }: ListProps) => {
           : <p>There's no pokemon 😿</p>
         }
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,24 @@
+.loader {
+  margin-top: 20px;
+  text-align: center;
+
+  @media #{$tablet-portrait} {
+    margin-top: 40px;
+  }
+
+  &-icon {
+    animation: rotating 1s linear infinite;
+    height: $loader-width;
+    width: $loader-width;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}

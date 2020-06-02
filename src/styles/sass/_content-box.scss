@@ -1,0 +1,155 @@
+$header-width: 180px;
+
+.content {
+  margin: $vertical-indent 20px;
+  max-width: $content-width;
+  position: relative;
+
+  @media (min-width: 540px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media #{$tablet-portrait} {
+    margin-top: calc(#{$vertical-indent} + #{$header-width} / 2);
+  }
+
+  &__info {
+    background-color: $white;
+    border: 1px solid $gray-light;
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%;
+
+    @media #{$tablet-portrait} {
+      padding: 0 40px 40px;
+    }
+  }
+
+  &__info-loader {
+    display: none;
+
+    &.is-visible {
+      display: block;
+    }
+  }
+
+  &__info-header {
+    background-color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $header-width;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      display: block;
+      content: '';
+      padding-top: 100%;
+    }
+
+    @media #{$tablet-portrait} {
+      border: 1px solid $gray-light;
+      border-radius: 50%;
+      margin-top: calc(-#{$header-width} / 2);
+    }
+  }
+
+  &__info-header-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__info-name {
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 230px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__info-title {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize;
+
+    @media #{$tablet-portrait} {
+      margin-top: 20px;
+    }
+  }
+
+  &__info-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__info-body {
+    margin-top: 10px;
+  }
+
+  &__info-table {
+    width: 100%;
+
+    tr td:first-child {
+      font-weight: 600;
+      text-transform: capitalize;
+      width: 120px;
+    }
+
+    tr td:last-child {
+      padding-left: 20px;
+    }
+  }
+
+  &__info-stat {
+    background-color: $primary;
+    text-align: center;
+    border-radius: 4px;
+
+    small {
+      color: $white;
+      font-size: 12px;
+    }
+  }
+
+  &__info-generation {
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+
+  &__back-link {
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    transform: translate(-50%, -40%);
+  }
+
+  &__back-icon {
+    height: 30px;
+    width: auto;
+
+    .background {
+      fill: $primary;
+    }
+  }
+
+  &-links-wrap {
+    margin-top: 20px;
+  }
+
+  p {
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+}

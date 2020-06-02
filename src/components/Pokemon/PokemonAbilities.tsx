@@ -11,12 +11,14 @@ const PokemonAbilities: React.FC<Props> = ({ abilities }): any => {
     return <tr>
       <td>Abilities</td>
       <td>
-        <ul>
+        <ul className="inline-list">
           {abilities.map((item) => {
             const { ability } = item;
 
             return <li key={ability.name}>
-              <Link to={`/ability/${ability.name}`}>{ability.name}</Link>
+              <Link to={`/ability/${ability.name}`} className="link">
+                {ability.name}
+              </Link>
             </li>;
           })}
         </ul>
