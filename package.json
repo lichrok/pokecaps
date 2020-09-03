@@ -1,5 +1,6 @@
 {
   "name": "pokecaps",
+  "homepage": "https://lichrok.github.io/pokecaps",
   "version": "0.1.0",
   "private": true,
   "description": "",
@@ -8,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
+    "gh-pages": "^3.1.0",
     "modern-css-reset": "^1.1.0",
     "node-sass": "^4.14.1",
     "react": "^16.8.0",
@@ -27,6 +29,7 @@
     "start:js": "react-scripts-ts start",
     "start": "npm-run-all -p watch:css start:js",
     "build": "npm run build:css && react-scripts-ts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },

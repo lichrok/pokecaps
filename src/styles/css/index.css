@@ -1,0 +1,254 @@
+@import url(~modern-css-reset/dist/reset.min.css);
+h1, p {
+  color: #291b19; }
+
+.main {
+  background-color: #f1f1f1;
+  min-height: 100vh; }
+  .main::before, .main::after {
+    clear: both;
+    content: '';
+    display: table; }
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px; }
+  @media only screen and (min-width: 1024px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1024px; } }
+
+.inline-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+  .inline-list li {
+    display: inline-block; }
+    .inline-list li:not(:last-child) {
+      margin-right: 10px; }
+      .inline-list li:not(:last-child)::after {
+        content: ','; }
+  .inline-list_theme_capital li {
+    text-transform: capitalize; }
+
+.link {
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  color: #df3a0c;
+  text-decoration: none; }
+  .link:hover {
+    color: #291b19; }
+  .link_theme_big {
+    text-transform: uppercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.loader {
+  margin-top: 20px;
+  text-align: center; }
+  @media only screen and (min-width: 670px) {
+    .loader {
+      margin-top: 40px; } }
+  .loader-icon {
+    animation: rotating 1s linear infinite;
+    height: 100px;
+    width: 100px; }
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-360deg); } }
+
+.card {
+  transition-property: transform;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  background-image: url("/cap-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  display: flex;
+  height: 100%;
+  outline: none;
+  overflow: hidden;
+  transform-origin: center center;
+  width: 100%; }
+  .card:hover {
+    transform: rotateX(25deg); }
+  .card:focus {
+    box-shadow: 0 0 6px 3px rgba(223, 58, 12, 0.4); }
+  .card__name {
+    height: 100%;
+    pointer-events: none;
+    position: relative;
+    width: 100%; }
+    .card__name text {
+      font-size: 3.5em;
+      left: 50%;
+      letter-spacing: 6px;
+      position: absolute;
+      text-transform: capitalize;
+      transform: scale(0.5) translate(-50%, -10%);
+      transform-origin: center center; }
+  .card-layout {
+    display: grid;
+    gap: 4vw;
+    grid-auto-rows: minmax(10em, auto);
+    grid-template-columns: repeat(auto-fill, minmax(10em, auto));
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 1024px; }
+    @media only screen and (min-width: 1024px) {
+      .card-layout {
+        margin-left: auto;
+        margin-right: auto; } }
+
+.search-wrap {
+  margin: 50px auto;
+  max-width: 1024px;
+  margin-left: 20px;
+  margin-right: 20px; }
+  @media only screen and (min-width: 1024px) {
+    .search-wrap {
+      margin-left: auto;
+      margin-right: auto; } }
+
+.search-input {
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  padding: 10px 8px;
+  width: 100%; }
+  .search-input:focus {
+    box-shadow: 0 0 3px #df3a0c;
+    outline: none; }
+
+.content {
+  margin: 50px 20px;
+  max-width: 500px;
+  position: relative; }
+  @media (min-width: 540px) {
+    .content {
+      margin-left: auto;
+      margin-right: auto; } }
+  @media only screen and (min-width: 670px) {
+    .content {
+      margin-top: calc(50px + 180px / 2); } }
+  .content__info {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    padding: 20px;
+    width: 100%; }
+    @media only screen and (min-width: 670px) {
+      .content__info {
+        padding: 0 40px 40px; } }
+  .content__info-loader {
+    display: none; }
+    .content__info-loader.is-visible {
+      display: block; }
+  .content__info-header {
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 180px;
+    position: relative;
+    width: 100%; }
+    .content__info-header::before {
+      display: block;
+      content: '';
+      padding-top: 100%; }
+    @media only screen and (min-width: 670px) {
+      .content__info-header {
+        border: 1px solid #dadada;
+        border-radius: 50%;
+        margin-top: calc(-180px / 2); } }
+  .content__info-header-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .content__info-name {
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 230px;
+    text-align: center;
+    text-transform: capitalize; }
+  .content__info-title {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: capitalize; }
+    @media only screen and (min-width: 670px) {
+      .content__info-title {
+        margin-top: 20px; } }
+  .content__info-img {
+    margin-left: auto;
+    margin-right: auto; }
+  .content__info-body {
+    margin-top: 10px; }
+  .content__info-table {
+    width: 100%; }
+    .content__info-table tr td:first-child {
+      font-weight: 600;
+      text-transform: capitalize;
+      width: 120px; }
+    .content__info-table tr td:last-child {
+      padding-left: 20px; }
+  .content__info-stat {
+    background-color: #df3a0c;
+    text-align: center;
+    border-radius: 4px; }
+    .content__info-stat small {
+      color: #fff;
+      font-size: 12px; }
+  .content__info-generation {
+    display: inline-block;
+    margin-left: 10px;
+    text-transform: uppercase; }
+  .content__back-link {
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    transform: translate(-50%, -40%); }
+  .content__back-icon {
+    height: 30px;
+    width: auto; }
+    .content__back-icon .background {
+      fill: #df3a0c; }
+  .content-links-wrap {
+    margin-top: 20px; }
+  .content p:not(:last-of-type) {
+    margin-bottom: 10px; }
+  .content-footer {
+    margin-top: 20px;
+    text-align: center; }
+
+.ability {
+  margin-top: 50px; }
+  .ability-title {
+    margin-bottom: 20px;
+    text-transform: capitalize; }
+  .ability-pokemons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 1024px) {
+      .ability-pokemons {
+        flex-direction: row; } }
+  @media only screen and (min-width: 1024px) {
+    .ability-pokemons__title {
+      flex-shrink: 0;
+      margin-right: 20px; } }
+  .ability p {
+    margin-bottom: 10px; }
