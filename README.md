@@ -1,4 +1,5 @@
 # react + redux + typescript SPA 
+Demo: [Pokecaps](https://lichrok.github.io/pokecaps/)
 
 ## Features
 - retrieves data from the pokeapi
