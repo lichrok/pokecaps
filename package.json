@@ -7,7 +7,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "modern-css-reset": "^1.1.0",
     "node-sass": "^4.14.1",
     "react": "^16.8.0",
